@@ -1,13 +1,13 @@
 package de.neoludolph.expense_tracker_api.Model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Expenses {
 
     private long amount;
     private category category;
     private String description;
-    private Date date;
+    private LocalDate date;
 
     public enum category {
         GROCERIES,
@@ -19,7 +19,7 @@ public class Expenses {
         OTHERS
     }
 
-    public Expenses(long amount, category category, String description, Date date) {
+    public Expenses(long amount, category category, String description, LocalDate date) {
         this.amount = amount;
         this.category = category;
         this.description = description;
@@ -50,11 +50,11 @@ public class Expenses {
         this.description = description;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
