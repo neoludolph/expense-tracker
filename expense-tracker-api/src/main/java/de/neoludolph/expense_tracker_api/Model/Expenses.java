@@ -1,13 +1,19 @@
 package de.neoludolph.expense_tracker_api.Model;
 
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Entity
 public class Expenses {
 
+    @Id
     private long amount;
     private category category;
     private String description;
-    private LocalDate date;
+    private LocalDateTime date;
 
     public enum category {
         GROCERIES,
@@ -19,11 +25,11 @@ public class Expenses {
         OTHERS
     }
 
-    public Expenses(long amount, category category, String description, LocalDate date) {
+    public Expenses(long amount, category category, String description) {
         this.amount = amount;
         this.category = category;
         this.description = description;
-        this.date = date;
+        this.date = LocalDateTime.now();
     }
 
     public long getAmount() {
