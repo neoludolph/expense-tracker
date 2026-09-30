@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="Electron">
   <diagram name="Seite-1" id="28Rcf3fhlDOS7ulKuc3e">
-    <mxGraphModel dx="1069" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1712" dy="1001" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="kz6KRr9-DaABWENchdoG-8" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Expenses" vertex="1">
-          <mxGeometry height="156" width="140" x="200" y="440" as="geometry" />
+          <mxGeometry height="156" width="140" x="110" y="420" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-9" parent="kz6KRr9-DaABWENchdoG-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ amount: long" vertex="1">
           <mxGeometry height="26" width="140" y="26" as="geometry" />
@@ -23,31 +23,31 @@
           <mxGeometry height="26" width="140" y="130" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-14" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ExpensesController" vertex="1">
-          <mxGeometry height="190" width="160" x="520" y="440" as="geometry" />
+          <mxGeometry height="198" width="160" x="450" y="230" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-15" parent="kz6KRr9-DaABWENchdoG-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ expenseService: ExpenseService" vertex="1">
-          <mxGeometry height="26" width="160" y="26" as="geometry" />
+          <mxGeometry height="34" width="160" y="26" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-16" parent="kz6KRr9-DaABWENchdoG-14" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
-          <mxGeometry height="8" width="160" y="52" as="geometry" />
+          <mxGeometry height="8" width="160" y="60" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-17" parent="kz6KRr9-DaABWENchdoG-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ addExpense(): void" vertex="1">
-          <mxGeometry height="26" width="160" y="60" as="geometry" />
+          <mxGeometry height="26" width="160" y="68" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-18" parent="kz6KRr9-DaABWENchdoG-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ removeExpense(): void" vertex="1">
-          <mxGeometry height="26" width="160" y="86" as="geometry" />
+          <mxGeometry height="26" width="160" y="94" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-19" parent="kz6KRr9-DaABWENchdoG-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ updateExpense(): void" vertex="1">
-          <mxGeometry height="26" width="160" y="112" as="geometry" />
+          <mxGeometry height="26" width="160" y="120" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-20" parent="kz6KRr9-DaABWENchdoG-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ listExpenses(): void" vertex="1">
-          <mxGeometry height="26" width="160" y="138" as="geometry" />
+          <mxGeometry height="26" width="160" y="146" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-21" parent="kz6KRr9-DaABWENchdoG-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ filterExpenses(): void" vertex="1">
-          <mxGeometry height="26" width="160" y="164" as="geometry" />
+          <mxGeometry height="26" width="160" y="172" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-28" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ExpensesService" vertex="1">
-          <mxGeometry height="86" width="160" x="210" y="660" as="geometry" />
+          <mxGeometry height="86" width="160" x="450" y="499" as="geometry" />
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-29" parent="kz6KRr9-DaABWENchdoG-28" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
           <mxGeometry height="26" width="160" y="26" as="geometry" />
@@ -57,6 +57,21 @@
         </mxCell>
         <mxCell id="kz6KRr9-DaABWENchdoG-31" parent="kz6KRr9-DaABWENchdoG-28" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ method(type): type" vertex="1">
           <mxGeometry height="26" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ey6-QwExE8PT7EMpA0CF-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ExpensesRepository&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="86" width="160" x="450" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="ey6-QwExE8PT7EMpA0CF-2" parent="ey6-QwExE8PT7EMpA0CF-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ field: type" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ey6-QwExE8PT7EMpA0CF-3" parent="ey6-QwExE8PT7EMpA0CF-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="ey6-QwExE8PT7EMpA0CF-4" parent="ey6-QwExE8PT7EMpA0CF-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ method(type): type" vertex="1">
+          <mxGeometry height="26" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ey6-QwExE8PT7EMpA0CF-5" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="Postgres" vertex="1">
+          <mxGeometry height="156" width="110" x="760" y="635" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
