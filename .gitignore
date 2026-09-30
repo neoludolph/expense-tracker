@@ -122,3 +122,8 @@ ehthumbs.db
 Thumbs.db
 
 *:Zone.Identifier
+
+*.drawio.bkp
+*.drawio.tmp
+*.drawio.dtmp
+*.drawio~
