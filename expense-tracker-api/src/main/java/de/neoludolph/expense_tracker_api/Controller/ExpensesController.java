@@ -16,26 +16,26 @@ public class ExpensesController {
 
     @PostMapping("/addExpense")
     public void addExpense(@RequestBody Expenses expense) {
-        expensesService.addExpense(expense);
+        expensesService.createExpense(expense);
     }
 
     @DeleteMapping("/removeExpense/{id}")
-    public void addExpense(@PathVariable String id) {
-        expensesService.removeExpense(expense);
+    public void removeExpense(@PathVariable String id) {
+        expensesService.deleteExpense(expense);
     }
 
     @PutMapping("/updateExpense/{id}")
-    public void addExpense(@RequestBody Expenses expense, @PathVariable String id) {
+    public void updateExpense(@RequestBody Expenses expense, @PathVariable String id) {
         expensesService.updateExpense(expense);
     }
 
     @GetMapping("/listExpenses")
-    public void addExpense() {
+    public void listExpenses() {
         expensesService.listExpenses();
     }
 
     @GetMapping("/filterExpenses")
-    public void addExpense() {
+    public void filterExpenses() {
         expensesService.filterExpenses();
     }
 }
