@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: spring-postgres
+    environment:
+      POSTGRES_DB: expense-tracker-api
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
