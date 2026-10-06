@@ -1,19 +1,31 @@
 package de.neoludolph.expense_tracker_api.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "expenses")
 public class Expenses {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "amount", nullable = false)
     private long amount;
+
+    @Column(name = "category", nullable = false)
     private category category;
+
+    @Column(name = "description", nullable = false)
     private String description;
+
+    @Column(name = "date", updatable = false)
     private LocalDateTime date;
+
+    public Expenses() {
+    }
 
     public enum category {
         GROCERIES,

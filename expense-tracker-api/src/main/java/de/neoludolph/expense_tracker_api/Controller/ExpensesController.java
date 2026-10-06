@@ -2,15 +2,19 @@ package de.neoludolph.expense_tracker_api.Controller;
 
 import de.neoludolph.expense_tracker_api.Model.Expenses;
 import de.neoludolph.expense_tracker_api.Service.ExpensesService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/expenses")
+@RequestMapping("/v1/expenses")
 public class ExpensesController {
 
     private final ExpensesService expensesService;
 
-    public ExpensesController(ExpensesService expensesService) {
+    public ExpensesController(@Qualifier("standardExpenseService") ExpensesService expensesService) {
         this.expensesService = expensesService;
     }
 
@@ -21,21 +25,21 @@ public class ExpensesController {
 
     @DeleteMapping("/removeExpense/{id}")
     public void removeExpense(@PathVariable String id) {
-        expensesService.deleteExpense(expense);
+        expensesService.deleteExpense(id);
     }
 
     @PutMapping("/updateExpense/{id}")
     public void updateExpense(@RequestBody Expenses expense, @PathVariable String id) {
-        expensesService.updateExpense(expense);
+        expensesService.updateExpense(expense, id);
     }
 
     @GetMapping("/listExpenses")
-    public void listExpenses() {
-        expensesService.listExpenses();
+    public List<Expenses> listExpenses() {
+        return expensesService.listExpenses();
     }
 
-    @GetMapping("/filterExpenses")
-    public void filterExpenses() {
-        expensesService.filterExpenses();
+    @GetMapping("/filterExpenses/{period}")
+    public List<Expenses> filterExpenses(@PathVariable String period) {
+        return expensesService.filterExpenses(period);
     }
 }
