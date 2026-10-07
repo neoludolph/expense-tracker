@@ -5,18 +5,19 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "expenses")
-public class Expenses {
+@Table(name = "expense")
+public class Expense {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "amount", nullable = false)
     private long amount;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "category", nullable = false)
-    private category category;
+    private Category category;
 
     @Column(name = "description", nullable = false)
     private String description;
@@ -24,10 +25,10 @@ public class Expenses {
     @Column(name = "date", updatable = false)
     private LocalDateTime date;
 
-    public Expenses() {
+    public Expense() {
     }
 
-    public enum category {
+    public enum Category {
         GROCERIES,
         LEISURE,
         ELECTRONICS,
@@ -37,11 +38,19 @@ public class Expenses {
         OTHERS
     }
 
-    public Expenses(long amount, category category, String description) {
+    public Expense(long amount, Category category, String description) {
         this.amount = amount;
         this.category = category;
         this.description = description;
         this.date = LocalDateTime.now();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public long getAmount() {
@@ -52,11 +61,11 @@ public class Expenses {
         this.amount = amount;
     }
 
-    public category getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(category category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
