@@ -9,6 +9,6 @@ public interface ExpenseService {
     void createExpense(Expense expense);
     void deleteExpense(Long id);
     void updateExpense(ExpenseUpdateDto expenseUpdateDto, Long id);
-    List<Expense> listExpense();
-    List<Expense> filterExpense(String period);
+    List<Expense> listExpenses();
+    List<Expense> filterExpenses(String period);
 }

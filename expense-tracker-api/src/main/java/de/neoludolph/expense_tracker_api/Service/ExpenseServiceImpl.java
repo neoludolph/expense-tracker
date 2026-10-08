@@ -3,7 +3,6 @@ package de.neoludolph.expense_tracker_api.Service;
 import de.neoludolph.expense_tracker_api.Dto.ExpenseUpdateDto;
 import de.neoludolph.expense_tracker_api.Model.Expense;
 import de.neoludolph.expense_tracker_api.Repository.ExpenseRepository;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -36,12 +35,23 @@ public class ExpenseServiceImpl implements ExpenseService {
     @Transactional
     @Override
     public void updateExpense(ExpenseUpdateDto expenseUpdateDto, Long id) {
-        Expense expense = expenseRepository.getReferenceById(expenseUpdateDto)
+        Expense expense = expenseRepository.getReferenceById(id);
+        if (expenseUpdateDto.amount() != null) {
+            expense.setAmount(expenseUpdateDto.amount());
+        }
+
+        if (expenseUpdateDto.category() != null) {
+            expense.setCategory(expenseUpdateDto.category());
+        }
+
+        if (expenseUpdateDto.description() != null) {
+            expense.setDescription(expenseUpdateDto.description());
+        }
     }
 
     @Override
     public List<Expense> listExpenses() {
-        expenseRepository.
+        return expenseRepository.findAll();
     }
 
     @Override
