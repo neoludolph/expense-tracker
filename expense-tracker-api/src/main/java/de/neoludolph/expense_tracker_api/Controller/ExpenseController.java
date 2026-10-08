@@ -35,11 +35,11 @@ public class ExpenseController {
 
     @GetMapping("/listExpenses")
     public List<Expense> listExpense() {
-        return expenseService.listExpense();
+        return expenseService.listExpenses();
     }
 
     @GetMapping("/filterExpenses/{period}")
     public List<Expense> filterExpense(@PathVariable String period) {
-        return expenseService.filterExpense(period);
+        return expenseService.filterExpenses(period);
     }
 }
