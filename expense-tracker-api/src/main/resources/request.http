@@ -1,0 +1,32 @@
+### Create expense
+POST http://localhost:8080/v1/expense/addExpense
+Content-Type: application/json
+
+{
+  "amount": "100",
+  "category": "CLOTHING",
+  "description": "Test description"
+}
+
+### Remove expense
+
+DELETE http://localhost:8080/v1/expense/removeExpense/1
+
+### Update expense
+
+PUT http://localhost:8080/v1/expense/updateExpense/1
+Content-Type: application/json
+
+{
+  "amount": "200",
+  "category": "HEALTH",
+  "description": "Second description"
+}
+
+### List expenses
+
+GET http://localhost:8080/v1/expense/listExpenses
+
+### Filter expenses
+
+GET http://localhost:8080/v1/expense/filterExpenses/10080
